@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mojo-scipy-interpolate"
+version = "0.1.0"
+description = "scipy.interpolate's spline and RBF interpolators, implemented in Mojo"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Lee Penkman", email = "leepenkman@gmail.com" }]
+dependencies = ["numpy", "scipy"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["python/mojoscipy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
